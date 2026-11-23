@@ -47,4 +47,4 @@ class ReviewBook:
         ratings = [rating for rating, _ in self.reviews_for(product_id)]
         if not ratings:
             return None
-        return int(sum(ratings) / len(ratings))
+        return round(sum(ratings) / len(ratings), 1)
